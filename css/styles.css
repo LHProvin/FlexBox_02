@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;/* coloca o box fora do html e body para nao ocorrer chance de quebrar alguma
+    tag do html e body*/
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Esse reset de 3 itens (margin, padding e height) tira todas as margens da pagina
+    e deixa ela resetada para ser trabalhada - sem scroll*/
+    
+}
+
+
+.container {
+    display:flex;
+    height: 100vh;/* SEMPRE DEFINIR OU ALTURA OU LARGURA NO PAI. Aqui estou certificando que minha coluna tem 100vh ou seja, tem o tamanho da tela toda de cima
+    em baixo */
+}
+
+.flex-column {
+    width: 50%; /* Aqui estou dizendo para a class que quero 50% de largura em cada coluna*/
+    flex: 1; /* quando uso flex = 1 significa 50/50 para cada lado e que meus itens filhos terao a mesma dimensao. Se tirar o 
+    width nao alterará nada pois com o flex 1 ele ja deixa as colunas na mesma dimensao.
+    EX: se eu tenho 2 colunas, terao 50% cada. Se eu colocar 3 coluna, terao 33,3% e assim por diante*/
+    display: flex; /* Aqui estou dizendo que dentro das colunas tem display flex. Consigo trabalhar dentro
+    delas com o display flex e as propriedades abaixo*/
+    justify-content: center; /* Aqui coloca o texto/algo no topo centralizado*/
+    align-items:center;/* Aqui colocar o texto exatamente no meio da pagina/coluna/linha*/
+}
+
+.col1 {
+    background: green;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;/* Define qual a distancia do topo ate o texto/algo*/
+    padding-left: 30px;
+    
+}
+
+.col2 {
+    background: gray;
+}
